@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<!--[if lte IE 8]><meta http-equiv="X-UA-Compatible" content="chrome=1" /><![endif]-->
+<title></title>
+<script type="application/javascript" src="boot.js"></script>
+</head>
+<style type="text/css">
+
+canvas {
+    image-rendering: optimizeSpeed;
+    image-rendering:-o-crisp-edges;
+    image-rendering:-webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+#container {width: 800px; display: block; position: absolute; top: 0; }
+#controls {width: 800px; display: block; position: absolute; top: 360px; }
+
+#toolstab {display: block; position: absolute; left: 760pt;}
+
+</style>
+
+
+<body>
+
+
+<div id="container">
+	<p><canvas id="myCanvas" width="1000" height="600" style="background:#999"></canvas></p>
+</div>
+
+<div id="controls">
+Vision angle: <input type="text" id="sweep_angle" value="80" />
+Vision distance: <input type="text" id="visiondist" value="10" />
+Sweep step: <input type="text" id="sweep_step" value="3" />
+<br>
+<input type="radio" name="modo" id="vision" onclick="changeMode('vision');" /> Vision
+<input type="radio" name="modo" id="ray" onclick="changeMode('ray');" /> Ray
+<br>
+Tilepack: <input type="text" id="tilepack" value="0" />
+
+</div>
+
+
+
+
+</body>
+</html>
+
